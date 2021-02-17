@@ -1,36 +1,39 @@
-// 1: Select the element with the ID 'about'. 
-//    Store the element in the variable `about`.
-const about = document.getElementById('about');
-about.style.border = "2px solid firebrick";
+// 1: Set the text of the <h1> element
+const h1 = document.querySelector('h1');
+h1.textContent = 'My Activities List';
 
-// 2: Select all the <h2> elements in the document.
-//    Set the color of the <h2> elements to a different color.
-const h2 = document.getElementsByTagName('h2');
-for (let i = 0; i < h2.length; i++) {
-  h2[i].style.color = 'slateblue';
-}
+// 2: Set the color of the <h1> to a different color
+h1.style.color = 'dodgerblue';
 
-// 3: Select all elements with the class '.card'. 
-//    Set their background color to the color of your choice.
-const cards = document.getElementsByClassName('card');
-for (let i = 0; i < cards.length; i++) {
-  cards[i].style.backgroundColor = 'seashell';
-}
+// 3: Set the content of the '.desc' paragraph
+// The content should include at least one HTML tag
+const desc = document.querySelector('.desc');
+desc.innerHTML = 'A list of <em>fun</em> things I want to do today';
 
-// 4: Select only the first <ul> in the document.
-//    Assign it to a variable named `ul`.
+// 4: Set the class of the <ul> to 'list'
 const ul = document.querySelector('ul');
+ul.className = 'list';
 
-ul.style.border = "2px solid indigo";
+// 5: Create a new list item and add it to the <ul>
+const li = document.createElement('li');
+li.innerHTML = '<input> Eat ice cream';
+ul.appendChild(li);
 
-// 5: Select only the second element with the class '.container'.
-//    Assign it to a variable named `container`.
-const container = document.getElementsByClassName('container')[1];
-container.style.backgroundColor = "royalblue";
-
-// 6: Select all <a> elements that have a 'title' attribute. 
-//    Set their color value to the color of your choice.
-const titleLinks = document.querySelectorAll('a[title]');
-for (let i = 0; i < titleLinks.length; i++) {
-  titleLinks[i].style.color = 'salmon'
+// 6: Change all <input> elements from text fields to checkboxes
+const inputs = document.querySelectorAll('input');
+for (let i = 0; i < inputs.length; i++) {
+  inputs[i].type = 'checkbox';
 }
+
+// 7: Create a <button> element, and set its text to 'Delete'
+// Add the <button> inside the '.extra' <div>
+const button = document.createElement('button');
+button.textContent = 'Delete';
+const extra = document.querySelector('.extra');
+extra.appendChild(button);
+
+// 8: Remove the '.extra' <div> element from the DOM when a user clicks the 'Delete' button
+button.addEventListener('click', () => {
+  const container = document.querySelector('.container');
+  container.removeChild(extra);
+});

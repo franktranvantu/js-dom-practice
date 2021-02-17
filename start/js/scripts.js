@@ -1,27 +1,24 @@
-// 1: Select the element with the ID 'about'. 
-//    Store the element in the variable `about`.
-const about;
-about.style.border = "2px solid firebrick";
-
-// 2: Select all the <h2> elements in the document.
-//    Set the color of the <h2> elements to a different color.
+// 1: Set the text of the <h1> element
 
 
-// 3: Select all elements with the class '.card'. 
-//    Set their background color to the color of your choice.
+// 2: Set the color of the <h1> to a different color
 
 
-// 4: Select only the first <ul> in the document.
-//    Assign it to a variable named `ul`.
-
-ul.style.border = "2px solid indigo";
-
-// 5: Select only the second element with the class '.container'.
-//    Assign it to a variable named `container`.
-
-container.style.backgroundColor = "royalblue";
-
-// 6: Select all <a> elements that have a 'title' attribute. 
-//    Set their color value to the color of your choice.
+// 3: Set the content of the '.desc' paragraph
+// The content should include at least one HTML tag
 
 
+// 4: Set the class of the <ul> to 'list'
+
+
+// 5: Create a new list item and add it to the <ul>
+
+
+// 6: Change all <input> elements from text fields to checkboxes
+
+
+// 7: Create a <button> element, and set its text to 'Delete'
+// Add the <button> inside the '.extra' <div>
+
+
+// 8: Remove the '.extra' <div> element from the DOM when a user clicks the 'Delete' button
